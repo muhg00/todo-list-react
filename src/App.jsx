@@ -7,23 +7,23 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
   const totalTask = todos.length;
-  const isFirstRender = useRef(true);
+  // const isFirstRender = useRef(true);
   const addCount = useRef(0);
   useEffect(() => {
-    if (isFirstRender.current) {
-      const savedTodos = localStorage.getItem("todos");
-      if (savedTodos) {
-        setTodos(JSON.parse(savedTodos));
-        console.log("загружено из localStorage", JSON.parse(savedTodos));
-      }
+    //  if (isFirstRender.current) {
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      setTodos(JSON.parse(savedTodos));
+      console.log("загружено из localStorage", JSON.parse(savedTodos));
+      //}
     }
-    isFirstRender.current = false;
+    // isFirstRender.current = false;
   }, []);
   useEffect(() => {
-    if (!isFirstRender.current) {
-      localStorage.setItem("todos", JSON.stringify(todos));
-      console.log("сохранен в localStorage", todos);
-    }
+    //  if (!isFirstRender.current) {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    console.log("сохранен в localStorage", todos);
+    //}
   }, [todos]);
   const addTodo = (e) => {
     e.preventDefault();
