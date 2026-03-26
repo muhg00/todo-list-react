@@ -1,0 +1,33 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.input {
+  display: block;
+  max-width: 169px;
+  margin: 10px auto;
+}
+.button {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  margin-top: 10px;
+}
+.input-button .input {
+  display: inline-block;
+  margin: 20px;
+}
+.input-button {
+  margin-left: 50px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.completed {
+  text-decoration: line-through;
+}
